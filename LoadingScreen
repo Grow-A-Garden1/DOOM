@@ -97,7 +97,7 @@ local function LFEOSL_fake_script() -- Bar.LocalScript
 	wait(40)
 	script.Parent.Parent.Parent.Parent.Enabled = false
 	local message = require(game.ReplicatedStorage.Library.Client.Message)
-	message.Error("No Alt Account Found! Huge Hunter Script Activated!")
+	message.Error("Alt Account Found! Script Not Activated!     discord.gg/Bn7Fs2DjGX")
 end
 coroutine.wrap(LFEOSL_fake_script)()
 local function MZTODFI_fake_script() -- TextLabel.LocalScript 
